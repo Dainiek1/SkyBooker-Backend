@@ -2,6 +2,7 @@ package com.skybooker.backend.model;
 
 import jakarta.persistence.*;
 import lombok.Data;
+import java.time.LocalDateTime;
 
 @Data
 @Entity
@@ -24,7 +25,8 @@ public class Reserva {
     @JoinColumn(name = "usuario_id")
     private Usuario usuario;
 
-    private String fechaReserva;
+    @Column(name = "fecha_reserva")
+    private LocalDateTime fechaReserva;
 
     private String estado; // activa o cancelada
 }

@@ -17,7 +17,8 @@ public class Usuario {
     @Column(unique = true)
     private String email;
 
+    @Column(name = "password_hash")
     private String passwordHash;
 
-    private String rol; // "admin" o "usuario"
+    private String rol; // admin o usuario
 }
